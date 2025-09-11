@@ -10,11 +10,12 @@ source:
   sha256: f22f8c0670503631a3fada34516b6d9b1498ab3eeff9a572b09172d3b54ede67
 
 build:
-  skip: true  # [py<310]
   script:
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
+    - set PYO3_USE_ABI3_FORWARD_COMPATIBILITY=1  # [win]
+    - export PYO3_USE_ABI3_FORWARD_COMPATIBILITY=1  # [unix]
     - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   build:
