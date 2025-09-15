@@ -1,5 +1,5 @@
 {% set name = "emval" %}
-{% set version = "0.1.9" %}
+{% set version = "0.1.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/emval-{{ version }}.tar.gz
-  sha256: f22f8c0670503631a3fada34516b6d9b1498ab3eeff9a572b09172d3b54ede67
+  sha256: 04ff287369bc02c0e69462fe98a23507b7400e60772258de50733a96db1ea30c
 
 build:
   skip: true  # [py<310]
