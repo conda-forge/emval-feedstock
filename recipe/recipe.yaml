@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: emval
-  version: "0.1.12"
+  version: "0.1.13"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/emval-${{ version }}.tar.gz
-  sha256: b80e37ec8df34d3ec39ad15251c7064b3d39d0c9da05132a17840e7ad02f30b0
+  sha256: 2d92b3377bc8192b204fd111993df271774b9985230d4adc812aa336e2c1a397
 
 build:
   number: 0
